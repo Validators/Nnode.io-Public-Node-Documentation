@@ -1,4 +1,4 @@
-Validators - Polkadot Public node API Documentation
+Validators - Polkadot Public Node API Documentation
 =====================================
 At Validators we strive to evolve the ecosystem of "green" blockchains with two areas of focus: 1. staking as a service ([Validators.com](https://validators.com)) and 2. public node infrastructure for application developers ([Validators.io](https://validators.io)).
 
