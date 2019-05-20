@@ -13,16 +13,17 @@ Getting started
 4. Email us at team@validators.com if you have any questions. We are very friendly ;).
 * * *
 
-Polkadot JSON-RPC endpoints
+Polkadot public nodes
 -----
 
-| **Network** | **Endpoint** | **Authentication** |
+| **Network** | **Url** | **API Authentication** |
 |------------|-------------------------------------------------|------------|
-| Testnet (PoC-4 "Alexander")  | https://polkadot.testnet.validators.io | HMAC |
-| Mainnet (Expected Q4 2019)  | ~~https://polkadot.mainnet.validators.io~~ | HMAC |
+| Testnet (PoC-4 "Alexander")  | http://polkadot.testnet.validators.io:9933 | HMAC |
+| Mainnet (Expected Q4 2019)  | ~~https://polkadot.mainnet.validators.io:9933~~ | HMAC |
 
 Testnet is currently running Proof-of-Concept version 4 "Alexander".
 
+Currently being setup:
 Behind each endpoint is a cluster of nodes working to serve your request. A load balancer and caching layer decides what node are serving data.
 
 
@@ -55,7 +56,7 @@ const message = {
    }
 };
 
-const sign = crypto
+const hash = crypto
    .createHmac('sha512', apiSecret)
    .update(JSON.stringify(message))
    .digest('hex');
@@ -72,8 +73,6 @@ Here is a guide to create the transaction hash with postman:
 2. Paste the following code to the `Pre-request Script` tab for the request. Fill in the apiKey and apiSecret variables you got from https://developers.validators.io. Be careful not to share your secret.
 
 ```js
-eval(postman.getGlobalVariable('crypto-js'))
-
 const crypto = require('crypto-js')
 
 const apiKey = ''
@@ -100,7 +99,7 @@ Please goto the official Polkadot JSON-RPC documentation at: https://polkadot.js
 As a simple illustration of a call to the JSON RPC endpoint this is taken from the Polkadot documentation. Returns the latest block.
 
 
-Example request `Body` with authorization headers as described above (not shown here):
+Example Request `Body` with authorization headers as described above (not shown here):
 
 ```json
 {
