@@ -38,7 +38,6 @@ Please add this to the http request headers:
 | api-key    | get your API-Key at https://developers.validators.io                                                                                  |
 | hash       | the request body signed by your API Secret using the HMAC-SHA512 method - see authentication examples below |
 
-
 ### Node.js authentication
 
 Example of how to sign a request with node.js using the `crypto` module:
