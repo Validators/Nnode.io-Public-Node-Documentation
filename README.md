@@ -68,7 +68,7 @@ Here is a guide to create the transaction hash with postman:
 
 1. Create new request. Select the `Headers` tab and add `ApiKey` and `Hash` headers. Use postman variable syntax for them in `Value` column. These variables will be updated for each request using the pre-request script.
 
-![Postman headers setup](https://static.validators.com/images/Postman-Hmac-headers.png)
+![Postman headers setup](https://static.validators.com/images/Postman-Hmac-headers-polkadot.png)
 
 2. Paste the following code to the `Pre-request Script` tab for the request. Fill in the apiKey and apiSecret variables you got from https://developers.validators.io. Be careful not to share your secret.
 
@@ -84,7 +84,7 @@ postman.setEnvironmentVariable('apiKey', apiKey)
 postman.setEnvironmentVariable('hash', hash)
 ```
 
-![Postman pre-request script setup](https://static.validators.com/images/Postman-Hmac-configuration.png)
+![Postman pre-request script setup](https://static.validators.com/images/Postman-Hmac-configuration-polkadot.png)
 
 3. Thats it. Now go to the `Body` tab and make your first JSON-RPC Method call from Postman. 
 
