@@ -1,29 +1,26 @@
-Validators - Polkadot Public Node API Documentation
+Nnode.io - Public Node API Documentation
 =====================================
-At Validators we strive to evolve the ecosystem of "green" blockchains with two areas of focus: 1. staking as a service ([Validators.com](https://validators.com)) and 2. public node infrastructure for application developers ([Validators.io](https://validators.io)).
+At Validators.com we strive to evolve the ecosystem of "green" blockchains with two areas of focus: 1. staking as a service ([validators.com](https://validators.com)) and 2. public node blockchain infrastructure for application developers ([nnode.io](https://nnode.io)).
 
-Okay, are you ready to engage with the Polkadot blockchain!
+Okay, are you ready to engage with a blockchain!
 
 Getting started
 ---------------
 
-1. Register as a developer and create your project at https://developers.validators.io.
-2. Choose a Polkadot Network (Testnet or Mainnet)
-3. Add API authentication to your RPC requests (see section below for examples).
+1. Register as a developer and create your project at https://nnode.io.
+2. Choose a blockchain you wish to connect to (list is also at https://nnode.io).
+3. Add **API authentication** to your RPC requests (see section below for examples).
 4. Email us at team@validators.com if you have any questions. We are very friendly ;).
 * * *
 
-Polkadot public nodes
+Blockchain public nodes
 -----
 
 | **Network** | **Url** | **API Authentication** |
 |------------|-------------------------------------------------|------------|
-| Testnet (PoC-4 "Alexander")  | http://polkadot.testnet.validators.io:9933 | HMAC |
-| Mainnet (Expected Q4 2019)  | ~~https://polkadot.mainnet.validators.io:9933~~ | HMAC |
+| Kusama (v0.6)  | https://kusama.nnode.io or (wss://)| None or HMAC |
+| Mainnet (Expected Q4 2019)  | ~~https://polkadot.nnode.io~~ | HMAC |
 
-Testnet is currently running Proof-of-Concept version 4 "Alexander".
-
-Currently being setup:
 Behind each endpoint is a cluster of nodes working to serve your request. A load balancer and caching layer decides what node are serving data.
 
 
@@ -35,7 +32,7 @@ Please add this to the http request headers:
 
 | **Header** | **Description**                                                                               |
 |------------|-----------------------------------------------------------------------------------------------|
-| api-key    | get your API-Key at https://developers.validators.io                                                                                  |
+| api-key    | get your API-Key at https://nnode.io                                                                                  |
 | hash       | the request body signed by your API Secret using the HMAC-SHA512 method - see authentication examples below |
 
 
@@ -70,9 +67,10 @@ Here is a guide to create the transaction hash with postman:
 
 ![Postman headers setup](https://static.validators.com/images/Postman-Hmac-headers-polkadot.png)
 
-2. Paste the following code to the `Pre-request Script` tab for the request. Fill in the apiKey and apiSecret variables you got from https://developers.validators.io. Be careful not to share your secret.
+2. Paste the following code to the `Pre-request Script` tab for the request. Fill in the apiKey and apiSecret variables you got from https://nnode.io. Be careful not to share your secret.
 
 ```js
+eval(postman.getGlobalVariable('crypto-js'))
 const crypto = require('crypto-js')
 
 const apiKey = ''
@@ -99,7 +97,7 @@ Please goto the official Polkadot JSON-RPC documentation at: https://polkadot.js
 As a simple illustration of a call to the JSON RPC endpoint this is taken from the Polkadot documentation. Returns the latest block.
 
 
-Example Request `Body` with authorization headers as described above (not shown here):
+Example POST Request `Body` (select raw & JSON in dropdown in Postman) with authorization headers as described above (not shown here):
 
 ```json
 {
