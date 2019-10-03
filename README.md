@@ -13,6 +13,9 @@ Getting started
 4. Email us at team@validators.com if you have any questions. We are very friendly ;).
 * * *
 
+Its possible to use the Kusama node without user registration and api-key.
+
+
 Blockchain public nodes
 -----
 
