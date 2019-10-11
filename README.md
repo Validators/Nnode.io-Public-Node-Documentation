@@ -2,6 +2,8 @@ Nnode.io - Public Node API Documentation
 =====================================
 At Validators.com we strive to evolve the ecosystem of "green" blockchains with two areas of focus: 1. staking as a service ([validators.com](https://validators.com)) and 2. public node blockchain infrastructure for application developers ([nnode.io](https://nnode.io)).
 
+This project was partly funded by the [Web3 Foundation](https://web3.foundation). You can read more about the entire project here: 
+
 Okay, are you ready to engage with a blockchain!
 
 Getting started
@@ -13,7 +15,7 @@ Getting started
 4. Email us at team@validators.com if you have any questions. We are very friendly ;).
 * * *
 
-Its possible to use the Kusama node without user registration and api-key.
+Its also possible to use the Kusama node without user registration and api-key.
 
 
 Blockchain public nodes
@@ -21,7 +23,7 @@ Blockchain public nodes
 
 | **Network** | **Url** | **API Authentication** |
 |------------|-------------------------------------------------|------------|
-| Kusama (v0.6)  | https://kusama.nnode.io or (wss://)| None or HMAC |
+| Kusama (v0.6.x)  | https://kusama.nnode.io or (wss://)| None or HMAC |
 | Mainnet (Expected Q4 2019)  | ~~https://polkadot.nnode.io~~ | HMAC |
 
 Behind each endpoint is a cluster of nodes working to serve your request. A load balancer and caching layer decides what node are serving data.
